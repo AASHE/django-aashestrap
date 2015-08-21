@@ -19,3 +19,5 @@ Installation
 
 3.  Run "pip install -r requirements.txt" from your project's
     directory to install required packages.
+
+4. Run "python manage.py migrate" to create the required models.
