@@ -1,0 +1,138 @@
+{% load i18n %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+  <head>
+    <title>{% block title %}{% endblock title %}</title>
+    <!-- Basic page metas -->
+    <meta charset="utf-8">
+
+    <!-- Mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'aashestrap/bootstrap/css/bootstrap.min.css' %}">
+    <link type="text/css" rel="stylesheet" media="all" href="{% static 'aashestrap/css/fonts/dejavu-sans/stylesheet.css' %}" />
+    <link type="text/css" rel="stylesheet" media="all" href="{% static 'aashestrap/fonts/dejavu-serif/stylesheet.css' %}" />
+    {% block css %}
+    <link rel="stylesheet" href="{% static 'aashestrap/css/style.css' %}">
+    {% endblock css %}
+
+    <!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="{% static 'aashestrap/img/favicon.ico' %}">
+
+    {% block head-extra %}
+    {% endblock head-extra %}
+  </head>
+
+  <body {% block body_attributes %}{% endblock body_attributes %}>
+    <div id="page" class="container">
+      <div class="row">
+        <div id="global-header" class="span12">
+          {% block global-header %}
+          <div class="row">
+            <div id="global-links" class="span8 block block-menu">
+              {% block global-navigation %}
+              {% endblock global-navigation %}
+            </div><!-- end #global-links -->
+
+            <div id="user-navigation" class="span4">
+              {% block user-navigation %}
+              {% endblock user-navigation %}
+            </div><!-- end #user-navigation -->
+          </div><!-- end .row -->
+          {% endblock global-header %}
+        </div><!-- end #global-header -->
+      </div><!-- end row -->
+
+      <div class="row">
+        <div id="header" class="span12">
+          {% block header %}
+          {% block logo %}
+          {% endblock logo %}
+
+          <div id="header-navigation">
+            {% block header-navigation %}
+            {% endblock header-navigation %}
+          </div><!-- end header-navigation -->
+
+          <div id="header-utility">
+            {% block header-utility %}
+            {% endblock header-utility %}
+          </div><!-- end header-utility -->
+
+          <div id="navigation" class="clearfix">
+            {% block navigation %}
+            {% endblock navigation %}
+          </div><!-- end navigation -->
+          {% endblock header %}
+        </div><!-- end header -->
+      </div><!-- end row -->
+
+      <div class="row">
+        <div id="breadcrumb" class="span12">
+          {% block breadcrumb %}
+          {% endblock breadcrumb %}
+        </div>
+      </div>
+
+      <div class="row">
+        <div id="tabs" class="span12">
+          {% block tabs %}
+          {% endblock tabs %}
+        </div>
+      </div>
+
+      {% block messages %}
+      {% endblock messages %}
+
+      {% block content-row %}
+      <div class="row">
+        <div class="span12">
+          <div id="content">
+            {% block page-title %}{% endblock page-title %}
+            {% block content %}
+            {% endblock %}
+          </div>
+        </div><!-- end #content -->
+
+      </div><!-- end .row -->
+      {% endblock content-row %}
+
+      <div class="row">
+        <div id="sitemap" class="span12">
+          {% block sitemap %}
+          {% endblock sitemap %}
+        </div><!-- end #sitemap -->
+      </div>
+
+      <div class="row">
+        <div id="footer" class="span12">
+          {% block footer %}
+          {% endblock footer %}
+        </div><!-- end #footer -->
+      </div>
+
+      <div class="row">
+        <div id="postscript" class="span12">
+          {% block postscript %}
+          {% endblock postscript %}
+        </div><!-- end postscript -->
+      </div>
+    </div>
+    {% block scripts %}
+    {% autoescape off %}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="{% static 'aashestrap/js/main.js' %}?S"></script>
+    {% endautoescape %}
+    {% endblock scripts %}
+    {% block extra-scripts %}{% endblock extra-scripts %}
+  </body>
+</html>

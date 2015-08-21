@@ -1,0 +1,123 @@
+{% extends "aashestrap/base.html" %}
+
+{% block global-navigation %}
+<ul class="menu">
+  <li class="leaf first active"><a href="http://www.aashe.org/" title="" class=" aashe"><span>aashe</span></a></li>
+  <li class="leaf"><a href="https://stars.aashe.org/" title="" class=" stars"><span>stars</span></a></li>
+  <li class="leaf last"><a href="http://conf2012.aashe.org/" title="" class=" annual-conference"><span>conference</span></a></li>
+</ul>
+{% endblock global-navigation %}
+
+{% block user-navigation %}
+{% if request.user.is_authenticated %}
+<ul>
+  <li class="first"><a href="http://www.aashe.org/user"><span>Your Account</span></a></li>
+  <li class="last"><a href="http://www.aashe.org/logout"><span>Logout</span></a></li>
+</ul>
+{% else %}
+<ul>
+  <li class="first"><a href="http://www.aashe.org/user/login" class="login"><span>Login</span></a></li>
+  <li><a href="http://www.aashe.org/user/register" class="register"><span>Create an Account</span></a></li>
+  <li class="last"><a href="http://www.aashe.org/membership" class="join"><span>Become a Member</span></a></li>
+</ul>
+{% endif %}
+{% endblock user-navigation %}
+
+{% block logo %}
+<h1 id="logo">
+  <a href="http://www.aashe.org/"><img src="{{ STATIC_URL }}img/aashe_logo_2012_128px.png" alt="" /></a>
+</h1>
+{% endblock logo %}
+
+{% block header-navigation %}
+{% include "aashestrap/search_form.html" %}
+{% endblock header-navigation %}
+
+{% block navigation %}
+<ul class="links primary-links"><li class=" home first "><a href="http://www.aashe.org/" title="" class=" home first"><span>Home</span></a></li>
+<li class=" events"><a href="http://www.aashe.org/events" title="" class=" events"><span>Events</span></a><ul class="menu" style="display: none; visibility: hidden; ">
+<li class="leaf first menu-mlid-104970"><a href="http://www.aashe.org/events/professional-development" title="" class=" professional-development"><span>Professional Development</span></a></li>
+<li class="leaf menu-mlid-38307"><a href="http://www.aashe.org/events/conferences" title="" class=" conferences"><span>Conferences</span></a></li>
+<li class="leaf menu-mlid-38306"><a href="http://www.aashe.org/events/webinars" title="" class=" webinars"><span>Webinars</span></a></li>
+<li class="leaf menu-mlid-38305"><a href="http://www.aashe.org/events/workshops" title="" class=" workshops"><span>Workshops</span></a></li>
+<li class="leaf last menu-mlid-60339"><a href="http://www.aashe.org/events/archive" title="" class=" archived-events"><span>Archived Events</span></a></li>
+</ul></li>
+<li class=" resources"><a href="http://www.aashe.org/resources" title="AASHE&#39;s Resource Center" class=" resources"><span>Resources</span></a><ul class="menu" style="display: none; visibility: hidden; "><li class="leaf first menu-mlid-38309 has-children"><a href="http://www.aashe.org/resources/general-resources-campus-sustainability" title="General Resources for Campus Sustainability" class=" general-resources-for-campus-sustainability"><span>General Resources for Campus Sustainability</span></a></li>
+<li class="leaf menu-mlid-38308 has-children"><a href="http://www.aashe.org/resources/education-research-resources" title="Education &amp; Research Resources" class=" education-research-resources"><span>Education &amp; Research Resources</span></a></li>
+<li class="leaf menu-mlid-38310 has-children"><a href="http://www.aashe.org/resources/campus-operations-resources" title="Campus Operations Resources" class=" campus-operations-resources"><span>Campus Operations Resources</span></a></li>
+<li class="leaf menu-mlid-38311 has-children"><a href="http://www.aashe.org/resources/planning-administration-engagement-resources" title="Planning, Administration &amp; Engagement Resources" class=" planning-administration-engagement-resources"><span>Planning, Administration &amp; Engagement Resources</span></a></li>
+<li class="leaf menu-mlid-38312 has-children"><a href="http://www.aashe.org/resources/publications-aashe" title="Publications from AASHE" class=" aashe-publications"><span>AASHE Publications</span></a></li>
+<li class="leaf menu-mlid-81990"><a href="http://www.aashe.org/about/aashe-awards" title="" class=" aashe-awards"><span>AASHE Awards</span></a></li>
+<li class="leaf last menu-mlid-38313"><a href="http://stars.aashe.org/" title="" class=" sustainability-tracking-assessment-rating-system-stars"><span>Sustainability Tracking, Assessment &amp; Rating System (STARS)</span></a></li>
+</ul></li>
+<li class=" connect-discuss"><a href="http://www.aashe.org/connect" title="Connect &amp; Discuss" class=" connect-discuss"><span>Connect &amp; Discuss</span></a><ul class="menu"><li class="leaf first menu-mlid-40754 has-children"><a href="http://www.aashe.org/connect/enewsletters" title="eNewsletters" class=" enewsletters"><span>eNewsletters</span></a></li>
+<li class="leaf menu-mlid-38315 has-children"><a href="http://www.aashe.org/forums" title="" class=" discussion-forums"><span>Discussion Forums</span></a></li>
+<li class="leaf menu-mlid-38317"><a href="http://www.aashe.org/blog" title="" class=" blog"><span>Blog</span></a></li>
+<li class="leaf menu-mlid-38320"><a href="http://www.aashe.org/connect/social-networks" title="" class=" social-networks"><span>Social Networks</span></a></li>
+<li class="leaf menu-mlid-39787"><a href="http://www.aashe.org/wiki/cool-campus-how-guide-college-and-university-climate-action-planning/cool-campus-how-guide-coll" title="Campus Climate Action Planning Wiki" class=" campus-climate-action-planning-wiki"><span>Campus Climate Action Planning Wiki</span></a></li>
+<li class="leaf last menu-mlid-92858"><a href="http://www.aashe.org/connect/open-space-conference-call-line" title="Open Space Conference Call Line" class=" open-space-conference-call-line"><span>Open Space Conference Call Line</span></a></li>
+</ul></li>
+<li class=" membership"><a href="http://www.aashe.org/membership" title="Membership" class=" membership"><span>Membership</span></a><ul class="menu"><li class="leaf first menu-mlid-40788"><a href="http://www.aashe.org/membership/about" title="Membership Description and Benefits" class=" about-aashe-membership"><span>About AASHE Membership</span></a></li>
+<li class="leaf menu-mlid-70151"><a href="http://www.aashe.org/membership/member-directory" title="" class=" member-directory"><span>Member Directory</span></a></li>
+<li class="leaf menu-mlid-40792"><a href="http://www.aashe.org/membership/business-directory" title="Business Product &amp; Service Directory" class=" business-product-service-directory"><span>Business Product &amp; Service Directory</span></a></li>
+<li class="leaf menu-mlid-38325"><a href="http://www.aashe.org/membership/member-spotlights" title="Member Spotlight Archive" class=" member-spotlight-archive"><span>Member Spotlight Archive</span></a></li>
+<li class="leaf menu-mlid-70194"><a href="http://www.aashe.org/membership/discounts" title="Discount Offers for AASHE Members" class="restricted-content member-discounts"><span>Member Discounts</span></a></li>
+<li class="leaf menu-mlid-71897"><a href="http://www.aashe.org/membership/member_logo.php" title="Guidelines for Use of the AASHE Member Logo" class=" aashe-member-logo"><span>AASHE-Member Logo</span></a></li>
+<li class="leaf last menu-mlid-61338"><a href="http://www.aashe.org/about/staff-directory#membership-info" title="" class=" contact-membership"><span>Contact Membership</span></a></li>
+</ul></li>
+<li class=" about-aashe"><a href="http://www.aashe.org/about" title="About AASHE" class="about-aashe"><span>About AASHE</span></a><ul class="menu"><li class="leaf first menu-mlid-38326"><a href="http://www.aashe.org/about/programs.php" title="AASHE Initiatives" class=" aashe-initiatives"><span>AASHE Initiatives</span></a></li>
+<li class="leaf menu-mlid-47239"><a href="http://www.aashe.org/about/aashe-mission-vision-goals" title="AASHE Mission, Vision and Goals" class=" aashe-mission-vision-and-goals"><span>AASHE Mission, Vision and Goals</span></a></li>
+<li class="leaf menu-mlid-40766"><a href="http://www.aashe.org/about/staff-directory" title="Staff and Contact Information" class=" staff-directory"><span>Staff Directory</span></a></li>
+<li class="leaf menu-mlid-40774"><a href="http://www.aashe.org/about/governance/board" title="Members of the Board of Directors, AASHE&#39;s Governing Body" class=" aashe-board-of-directors"><span>AASHE Board of Directors</span></a></li>
+<li class="leaf menu-mlid-40777"><a href="http://www.aashe.org/about/governance-documents" title="Governance Documents" class="restricted-content governance-documents"><span>Governance Documents</span></a></li>
+<li class="leaf menu-mlid-40776 has-children"><a href="http://www.aashe.org/about/councils" title="AASHE Councils" class=" aashe-councils"><span>AASHE Councils</span></a></li>
+<li class="leaf menu-mlid-38328"><a href="http://www.aashe.org/about/press" title="" class=" media-press"><span>Media &amp; Press</span></a></li>
+<li class="leaf menu-mlid-42753"><a href="http://www.aashe.org/about/annual-report" title="Annual Report" class=" annual-report"><span>Annual Report</span></a></li>
+<li class="leaf menu-mlid-40641"><a href="http://www.aashe.org/about/employment-opportunities" title="Employment Opportunities" class=" employment-opportunities"><span>Employment Opportunities</span></a></li>
+<li class="leaf menu-mlid-40767 has-children"><a href="http://www.aashe.org/about/aashe-awards" title="AASHE Sustainability Awards" class=" aashe-awards"><span>AASHE Awards</span></a></li>
+<li class="leaf menu-mlid-47243"><a href="http://www.aashe.org/about/faq" title="Frequently Asked Questions" class=" frequently-asked-questions"><span>Frequently Asked Questions</span></a></li>
+<li class="leaf last menu-mlid-39788"><a href="http://www.aashe.org/about/announcements" class=" announcements"><span>Announcements</span></a></li>
+</ul></li>
+<li class="donate-aashe last"><a href="https://donate.aashe.org/"><button class="btn btn-success">Donate</button></a></li>
+</ul>
+{% endblock navigation %}
+
+{% block sitemap %}
+{% include "aashestrap/sitemap.html" %}
+{% endblock sitemap %}
+
+{% block footer %}
+<div class="row">
+  <div class="span9">
+    <div id="footer-message">
+      <div id="copyright">
+        <p class="copyright">All Material Copyright © 2005–2012 Association for the Advancement of Sustainability in Higher Education. AASHE reserves the right to control the reproduction and use of all material posted on this website.</p>
+        <p>1536 Wynkoop St., Suite 100, Denver CO 80202 - t: (303) 395-1331<br />
+          Remittance Address: PO Box 824583, Philadelphia, PA 19182-4583<br />
+          For problems or questions about this site please <a href="/contact">contact the webmaster</a> <br>
+          <a href="/privacy-policy">Privacy Policy</a>
+        </p> 
+      </div><!-- end #copyright -->
+    </div><!-- end #footer-message -->
+  </div><!-- end #span10 -->
+  
+  <div id="contact-links" class="span3">
+    <div id="block-block-33" class="block block-block">
+      <p><a href="http://www.aashe.org/contact">Contact</a></p>
+      <dl>
+        <dt>Follow AASHE:</dt>
+        <dd><a href="http://twitter.com/AASHENews" class="twitter">Twitter</a></dd>
+        <dd><a href="https://www.facebook.com/pages/Aashe/200867813286094" class="facebook">Facebook</a></dd>
+        <dd><a href="http://www.youtube.com/aasheorg" class="youtube">Youtube</a></dd>
+        <dd><a href="http://www.flickr.com/photos/aashe/" class="flickr">Flickr</a></dd>
+      </dl>
+      <a id="context-block-block-33" class="context-block editable edit-sitewide_context"></a>
+      </div><!-- end #block-block-33 -->
+    </div><!-- end #contact-links -->
+</div><!-- end row -->
+{% endblock footer %}
+
+{% block scripts %}
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/main.js?S"></script>
+{% endblock scripts %}
