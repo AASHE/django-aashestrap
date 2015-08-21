@@ -11,12 +11,13 @@ def read(fname):
 
 setup(name='aashestrap',
       version=get_version().replace(' ', '-'),
-      description='AASHE module containing templates and JS used with AASHE properties',
+      description='AASHE package containing templates and JS used with AASHE properties',
       author='AASHE',
       author_email='webdev@aashe.org',
       url='http://pypi.aashe.org/',
       long_description=read("README.rst"),
-      packages=find_packages(),
+      packages=['aashestrap'],
+      license="MIT License",
       install_requires=[
             "Django>=1.8",
       ],
