@@ -75,3 +75,5 @@ Status API Training Shop Blog About Pricing
 
 .idea
 dist
+
+*.pyc
