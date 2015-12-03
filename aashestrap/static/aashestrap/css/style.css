@@ -2128,7 +2128,6 @@ div.aashe-container {
   background-color: #ffffff;
 }
 .two-sidebars #content-main {
-  /*    background: @white url(../images/bg_sidebar.png) 100% 0 repeat-y; */
 
   background: #ffffff 100% 0 repeat-y;
 }
@@ -2137,7 +2136,6 @@ div.aashe-container {
   width: 460px;
 }
 .one-sidebar #content-main {
-  /*    background: @white url(../images/bg_sidebar.png) 100% 0 repeat-y; */
 
   background: #ffffff 100% 0 repeat-y;
 }
@@ -4876,7 +4874,7 @@ ul.section-tabs li a.current:hover {
   padding: 0 20px 0 0;
 }
 .page-membership .legend li a {
-  background: transparent url(../img/icons-member-directory.png) no-repeat 0 4px;
+  background: transparent;
   display: block;
   float: left;
   padding: 0 0 0 15px;
@@ -4932,7 +4930,7 @@ ul.section-tabs li a.current:hover {
   padding-right: 10px;
 }
 .page-membership .legend li#toggle-link a {
-  background: transparent url(../img/icons-member-directory.png) no-repeat 100% -300px;
+  background: transparent;
   display: block;
   padding: 0 18px 0 0;
 }
@@ -4940,10 +4938,10 @@ ul.section-tabs li a.current:hover {
   background-position: 100% -200px;
 }
 .page-membership div.associate-member {
-  background: transparent url(../img/icons-member-directory.png) no-repeat 0 -96px;
+  background: transparent;
 }
 .page-membership div.full-member {
-  background: transparent url(../img/icons-member-directory.png) no-repeat 0 4px;
+  background: transparent;
 }
 .page-membership div.member-info {
   padding: 0 0 0 20px;
@@ -4954,7 +4952,7 @@ ul.section-tabs li a.current:hover {
   font-size: 11px;
 }
 .page-membership span.checked {
-  background: transparent url(../img/icons-member-directory.png) no-repeat 0 -400px;
+  background: transparent;
   display: block;
   height: 10px;
   margin: 0 auto;
@@ -5610,7 +5608,7 @@ ul.section-tabs li a.current:hover {
   font-size: 11px;
   /*
     h2 {
-      
+
       .border-radius-top;
       background-color: @blue-lightest;
       border: 1px solid @hr;
@@ -5679,7 +5677,7 @@ ul.section-tabs li a.current:hover {
   font-size: 11px;
   /*
     h2 {
-      
+
       .border-radius-top;
       background-color: @blue-lightest;
       border: 1px solid @hr;
@@ -5811,7 +5809,7 @@ ul.section-tabs li a.current:hover {
 /*------------------------------------------------------------------------------------------------------------------------
 
   MISC
-  
+
 ------------------------------------------------------------------------------------------------------------------------*/
 /*  Comments
 ----------------------------------------------------------------------------------------------------*/
