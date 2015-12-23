@@ -17,6 +17,7 @@ setup(name='aashestrap',
       url='http://pypi.aashe.org/',
       long_description=read("README.rst"),
       packages=['aashestrap'],
+      include_package_data=True,
       license="MIT License",
       install_requires=[
             "Django>=1.8",
