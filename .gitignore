@@ -1,17 +1,3 @@
-Skip to content
-This repository  
-Search
-Pull requests
-Issues
-Gist
- @baronvonvaderham
- Watch 1,279
-  Star 27,542
- Fork 10,094github/gitignore
-Branch: master  gitignore/Python.gitignore
-@gsneddersgsnedders on Apr 28 Add Jython compiled class files to the Python ignore file.
-33 contributors @arcresu @Metallicow @tzicatl @EvandroLG @Lucretiel @matheussl @jspahrsummers @rayshan @relekang @borntyping @sigo @llonchj @kdeldycke @reinout @honzajavorek @hugovk @gsnedders @xiaogaozi @adamv @skuschel @nvie @ecarreras @thedaniel @cjerdonek @Visgean @arjun024 and others
-RawBlameHistory    59 lines (49 sloc)  0.713 kB
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -75,5 +61,3 @@ Status API Training Shop Blog About Pricing
 
 .idea
 dist
-
-*.pyc
