@@ -22,22 +22,32 @@ Installation
 
 4. Run "python manage.py migrate" to create the required models.
 
+5. Run "python manage.py get_menu" to initialize menu table data.
+
+6. Set up daily task to keep menu table updated (see below).
+
 Menu Syncing
 ------------
 
-aashestrap contains a template tag to drop the sitemap footer retrieved
-from the main Drupal site into your base template. This is then used as
-usual to populate the navigation drop-down menus at the top.
+aashestrap contains template tags to drop the sitemap footer and drop-downs
+retrieved from the main Drupal site into your base template.
 
 This sync should be run nightly by your app using the included management
 command 'get_menu'. See documentation for your hosting environment for
 how to implement the scheduled task on the server.
 
-Menu Template Tag
------------------
+Menu Template Tags (use outside of aashestrap)
+----------------------------------------------
 
-To include the site map footer from the Drupal site on your base template,
+To include the site map footer from the Drupal site on your template,
 simply insert:
 
-    {% load get_menu %}
-    {% drupal_menu %}
+    {% load aashe_menu %}
+    ...
+    {% drupal_header_menu %}
+    ...
+    {% drupal_footer_menu %}
+    ...
+
+See context in 'base_aashe.html' and 'sitemap.html' to see what tags you
+may need to surround these templatetags with.
