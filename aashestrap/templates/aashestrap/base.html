@@ -68,10 +68,10 @@
             {% endblock header-utility %}
           </div><!-- end header-utility -->
 
-          <div id="navigation" class="clearfix">
-            {% block navigation %}
-            {% endblock navigation %}
-          </div><!-- end navigation -->
+        {% block navigation %}
+            <!-- div tags now in aashe_menu.drupal_header_menu tag in base_aashe.html -->
+        {% endblock navigation %}
+          <!-- end navigation -->
           {% endblock header %}
         </div><!-- end header -->
       </div><!-- end row -->

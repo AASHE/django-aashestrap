@@ -21,6 +21,7 @@ setup(name='aashestrap',
       license="MIT License",
       install_requires=[
             "Django>=1.8",
+            "BeautifulSoup",
       ],
       dependency_links=[('git+https://github.com/AASHE/')]
       )
