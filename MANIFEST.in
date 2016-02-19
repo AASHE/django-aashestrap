@@ -2,3 +2,6 @@ include LICENSE
 include README.rst
 recursive-include aashestrap/static *
 recursive-include aashestrap/templates *
+recursive-include aashestrap/templatetags *
+recursive-include aashestrap/management *
+recursive-include aashestrap/migrations *
