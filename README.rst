@@ -1,3 +1,5 @@
+[![Issue Count](https://codeclimate.com/github/AASHE/django-aashestrap/badges/issue_count.svg)](https://codeclimate.com/github/AASHE/django-aashestrap)
+
 ==========
 aashestrap
 ==========
