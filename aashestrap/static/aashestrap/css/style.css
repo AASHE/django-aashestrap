@@ -681,7 +681,7 @@ ol.views-items li.views-item {
 }
 /* No margin for nested ul */
 ol ul {
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
 /*  Tabs */
 ul.tabs.primary {
