@@ -6,10 +6,21 @@
 
     <title>{% block title %}{% endblock title %}</title>
 
-    <script type="text/javascript">document.documentElement.className = 'js';</script>
+    {% block scripts %}
+      {% autoescape off %}
+        <script type="text/javascript">document.documentElement.className = 'js';</script>
+        <script type="text/javascript" src="{% static 'aashestrap/js/jquery-2.1.4.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'aashestrap/bootstrap/js/bootstrap.js' %}"></script>
+        <script type="text/javascript" src="{% static 'aashestrap/js/modernizr.js' %}"></script>
+        <script type="text/javascript" src="{% static 'aashestrap/js/breakdance.js' %}"></script>
+        <script type="text/javascript" src="{% static 'aashestrap/js/base.js' %}"></script>
+      {% endautoescape %}
+    {% endblock scripts %}
 
-    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,400i,700,700i" rel="stylesheet">
-    <link href="{% static 'aashestrap/css/style.css' %}" rel="stylesheet" type="text/css" />
+    {% block css %}
+      <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,400i,700,700i" rel="stylesheet">
+      <link href="{% static 'aashestrap/css/style.css' %}" rel="stylesheet" type="text/css" />
+    {% endblock css %}
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% block head-extra %}{% endblock head-extra %}
@@ -136,10 +147,10 @@
               </div>
             </div>
             <div class="social-link">
-              <a href="https://www.facebook.com/pages/Aashe/200867813286094" class="facebook">Facebook</a>
-              <a href="http://twitter.com/AASHENews" class="twitter">Twitter</a>
+              <a href="https://www.facebook.com/pages/Aashe/200867813286094" class="social-facebook">Facebook</a>
+              <a href="http://twitter.com/AASHENews" class="social-twitter">Twitter</a>
               <a href="https://www.linkedin.com/company-beta/764027/" class="social-linkedin">LinkedIn</a>
-              <a href="http://www.flickr.com/photos/aashe/" class="flickr">Flickr</a>
+              <a href="http://www.flickr.com/photos/aashe/" class="social-flickr">Flickr</a>
             </div>
           </div>
           <div class="copyright">
@@ -157,14 +168,5 @@
       </footer>
       {% endblock footer %}
     </div>
-
-    {% block scripts %}
-      {% autoescape off %}
-        <script type="text/javascript" src="{% static 'aashestrap/js/jquery-2.1.4.min.js' %}"></script>
-        <script type="text/javascript" src="{% static 'aashestrap/js/modernizr.js' %}"></script>
-        <script type="text/javascript" src="{% static 'aashestrap/js/breakdance.js' %}"></script>
-        <script type="text/javascript" src="{% static 'aashestrap/js/base.js' %}"></script>
-      {% endautoescape %}
-    {% endblock scripts %}
   </body>
 </html>
