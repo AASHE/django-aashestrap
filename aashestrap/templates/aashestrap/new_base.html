@@ -56,8 +56,26 @@
                   </div>
                 </div>
               </div>
-              {% block navigation %}
-              {% endblock navigation %}
+              <div id="main-menu">
+                <div class="inner">
+
+                  {% block navigation %}{% endblock navigation %}
+
+                  <div id="controls">
+                    <div>
+                      <a href="http://aashe.wpengine.com/contact/" class="icon-contact">Contact Us</a>
+                    </div>
+                    <div class="search">
+                      <form action="http://aashe.wpengine.com/" class="search-form" method="get" role="search">
+                        <label for="site-search"><span class="search-text screen-reader-text">Search For:</span></label>
+                        <input type="search" title="Search for:" name="s" value="" placeholder="Search" class="search-box" id="site-search">
+                        <input type="submit" value="Search" class="search-submit">
+                      </form>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
             {% endblock global-header %}
           </header>
       {% endblock header %}
@@ -65,22 +83,27 @@
       <div id="content" class="site-content">
 
         <div id="banner">
-          <div id="inner">
+          <div class="inner">
             {% block title-banner %}{% endblock %}
           </div>
         </div>
-
 
         <div class="home-grid">
           <div class="inner">
             <div class="wrap">
 
-              {% block tabs %}{% endblock tabs %}
-
               {% block messages %}{% endblock messages %}
 
-              {% block content %}{% endblock content %}
-
+              <div id="primary" class="content-area">
+                <main id="main" class="site-main" role="main">
+                  <div class="inner">
+                    <div class="vc_row wpb_row vc_row-fluid">
+                      {% block tabs %}{% endblock tabs %}
+                    </div>
+                    {% block content %}{% endblock content %}
+                  </div>
+                </main>
+              </div>
             </div>
           </div>
         </div>
