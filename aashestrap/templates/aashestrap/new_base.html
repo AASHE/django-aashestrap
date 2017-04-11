@@ -1,0 +1,147 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>{% block title %}{% endblock title %}</title>
+
+    <script type="text/javascript">document.documentElement.className = 'js';</script>
+
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,400i,700,700i" rel="stylesheet">
+    <link href="{% static 'aashestrap/css/style.css' %}" rel="stylesheet" type="text/css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block head-extra %}{% endblock head-extra %}
+  </head>
+
+  <body {% block body_attributes %}{% endblock body_attributes %}>
+    <div id="site">
+      {% block header %}
+          <header id="header">
+            {% block global-header %}
+              <div id="toolbar">
+                <div class="inner">
+                  {% block global-navigation %}
+                    <div id="aashe-sites">
+                      <div class="title">AASHE Sites</div>
+                      <div class="content">
+                        <ul class="link-list">
+                          <li class="active"><a href="http://www.aashe.org/">AASHE Home</a></li>
+                          <li><a href="https://stars.aashe.org/">STARS</a></li>
+                          <li><a href="http://conference.aashe.org/">Conference</a></li>
+                          <li><a href="http://hub.aashe.org/">Resource Hub</a></li>
+                          <li><a href="http://bulletin.aashe.org/">Bulletin</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  {% endblock global-navigation %}
+                  <div id="member-links">
+                    {% block user-navigation %}
+                      <a href="https://customer2597942ba.portal.membersuite.com/Login.aspx?redirectURL={{ request.path }}" class="condensed">Login</a>
+                      <a href="https://customer2597942ba.portal.membersuite.com/Login.aspx?redirectURL={{ request.path }}" class="icon-portal">Member Portal</a>
+                      <a href="https://customer2597942ba.portal.membersuite.com/profile/CreateAccount_BasicInfo.aspx" class="icon-star">New Account</a>
+                    {% endblock user-navigation %}
+                  </div>
+                </div>
+              </div>
+              <div id="branding">
+                <div class="inner">
+                  <div class="logo">
+                    {% block logo %}
+                      <a href="http://www.aashe.org/">
+                        <span class="graphic">AASHE</span><span class="text">The Association for the Advancement of Sustainability in Higher Education</span>
+                      </a>
+                    {% endblock logo %}
+                  </div>
+                </div>
+              </div>
+              {% block navigation %}
+              {% endblock navigation %}
+            {% endblock global-header %}
+          </header>
+      {% endblock header %}
+
+      <div id="content" class="site-content">
+
+        <div id="banner">
+          <div id="inner">
+            {% block title-banner %}{% endblock %}
+          </div>
+        </div>
+
+
+        <div class="home-grid">
+          <div class="inner">
+            <div class="wrap">
+
+              {% block tabs %}{% endblock tabs %}
+
+              {% block messages %}{% endblock messages %}
+
+              {% block content %}{% endblock content %}
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {% block footer %}
+      <footer id="footer">
+        <div class="inner">
+          <div class="logo">
+            <a href="#">
+              <span class="graphic">AASHE</span><span class="text">The Association for the Advancement of Sustainability in Higher Education</span>
+            </a>
+          </div>
+          <div class="content">
+            <div class="links">
+              <div class="col1">
+                <a href="#" class="button-dark">Conference</a>
+                <a href="#" class="button-dark">Resource Hub</a>
+              </div>
+              <div class="col2">
+                <a href="#" class="button-dark">STARS</a>
+                <a href="#" class="button-dark">Bulletin</a>
+              </div>
+            </div>
+            <div class="contact">
+              <div class="address">2401 Walnut Street<br />Suite 102<br />Philadelphia, PA 19103</div>
+              <div class="info">
+                <div class="phone">888-347-9997</div>
+                <div class="email"><a href="mailto:email@aashe.org">email@aashe.org</a></div>
+              </div>
+            </div>
+            <div class="social-link">
+              <a href="https://www.facebook.com/pages/Aashe/200867813286094" class="facebook">Facebook</a>
+              <a href="http://twitter.com/AASHENews" class="twitter">Twitter</a>
+              <a href="https://www.linkedin.com/company-beta/764027/" class="social-linkedin">LinkedIn</a>
+              <a href="http://www.flickr.com/photos/aashe/" class="flickr">Flickr</a>
+            </div>
+          </div>
+          <div class="copyright">
+            <div class="desc">
+              All Material Copyright © 2005–2015 Association for the Advancement of Sustainability in Higher Education. AASHE reserves the right to control the reproduction and use of all material posted on this website.
+            </div>
+            <div class="link">
+              Questions? Visit our <a href="#">Help Center</a>
+            </div>
+            <div class="link">
+              <a href="#">Privacy Policy</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      {% endblock footer %}
+    </div>
+
+    {% block scripts %}
+      {% autoescape off %}
+        <script type="text/javascript" src="{% static 'aashestrap/js/jquery-2.1.4.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'aashestrap/js/modernizr.js' %}"></script>
+        <script type="text/javascript" src="{% static 'aashestrap/js/breakdance.js' %}"></script>
+        <script type="text/javascript" src="{% static 'aashestrap/js/base.js' %}"></script>
+      {% endautoescape %}
+    {% endblock scripts %}
+  </body>
+</html>
