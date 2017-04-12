@@ -18,6 +18,7 @@
     {% endblock scripts %}
 
     {% block css %}
+      <link href="{% static 'aashestrap/css/bootstrap.css' %}" rel="stylesheet" type="text/css" />
       <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,400i,700,700i" rel="stylesheet">
       <link href="{% static 'aashestrap/css/style.css' %}" rel="stylesheet" type="text/css" />
     {% endblock css %}
@@ -98,6 +99,10 @@
             {% block title-banner %}{% endblock %}
           </div>
         </div>
+
+            <div class="wrap">
+              {% block breadcrumbs %}{% endblock %}
+            </div>
 
         <div class="home-grid">
           <div class="inner">
