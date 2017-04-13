@@ -1,0 +1,45 @@
+<div id="site">
+  <header id="header">
+    <div id="toolbar">
+      <div class="inner">
+        {% block global-navigation %}
+          <div id="aashe-sites">
+            <div class="title">AASHE Sites</div>
+            <div class="content">
+              <ul class="link-list aashe-header">
+                <li><a href="http://www.aashe.org/">AASHE Home</a></li>
+                {% if 'stars' in request.path  %}
+                  <li class="active"><a href="https://stars.aashe.org/">STARS</a></li>
+                {% else %}
+                  <li><a href="https://stars.aashe.org/">STARS</a></li>
+                {% endif %}
+                {% if 'conference' in request.path  %}
+                  <li class="active"><a href="http://conference.aashe.org/">Conference</a></li>
+                {% else %}
+                  <li><a href="http://conference.aashe.org/">Conference</a></li>
+                {% endif %}
+                {% if 'hub' in request.path %}
+                  <li class="active"><a href="http://hub.aashe.org/">Resource Hub</a></li>
+                {% else %}
+                  <li><a href="http://hub.aashe.org/">Resource Hub</a></li>
+                {% endif %}
+                {% if 'bulletin' in request.path %}
+                  <li class="active"><a href="http://bulletin.aashe.org/">Bulletin</a></li>
+                {% else %}
+                  <li><a href="http://bulletin.aashe.org/">Bulletin</a></li>
+                {% endif %}
+              </ul>
+            </div>
+          </div>
+        {% endblock global-navigation %}
+        <div id="member-links" class="member-links">
+          {% block user-navigation %}
+            <a href="https://customer2597942ba.portal.membersuite.com/Login.aspx?redirectURL={{ request.path }}" class="condensed">Login</a>
+            <a href="https://customer2597942ba.portal.membersuite.com/Login.aspx?redirectURL={{ request.path }}" class="icon-portal">Member Portal</a>
+            <a href="https://customer2597942ba.portal.membersuite.com/profile/CreateAccount_BasicInfo.aspx" class="icon-star">New Account</a>
+          {% endblock user-navigation %}
+        </div>
+      </div>
+    </div>
+  </header>
+</div>

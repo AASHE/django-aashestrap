@@ -124,54 +124,7 @@
           </div>
         </div>
       </div>
-
-      {% block footer %}
-      <footer id="footer">
-        <div class="inner">
-          <div class="logo">
-            <a href="#">
-              <span class="graphic">AASHE</span><span class="text">The Association for the Advancement of Sustainability in Higher Education</span>
-            </a>
-          </div>
-          <div class="content">
-            <div class="links">
-              <div class="col1">
-                <a href="#" class="button-dark">Conference</a>
-                <a href="#" class="button-dark">Resource Hub</a>
-              </div>
-              <div class="col2">
-                <a href="#" class="button-dark">STARS</a>
-                <a href="#" class="button-dark">Bulletin</a>
-              </div>
-            </div>
-            <div class="contact">
-              <div class="address">2401 Walnut Street<br />Suite 102<br />Philadelphia, PA 19103</div>
-              <div class="info">
-                <div class="phone">888-347-9997</div>
-                <div class="email"><a href="mailto:email@aashe.org">email@aashe.org</a></div>
-              </div>
-            </div>
-            <div class="social-link">
-              <a href="https://www.facebook.com/pages/Aashe/200867813286094" class="social-facebook">Facebook</a>
-              <a href="http://twitter.com/AASHENews" class="social-twitter">Twitter</a>
-              <a href="https://www.linkedin.com/company-beta/764027/" class="social-linkedin">LinkedIn</a>
-              <a href="http://www.flickr.com/photos/aashe/" class="social-flickr">Flickr</a>
-            </div>
-          </div>
-          <div class="copyright">
-            <div class="desc">
-              All Material Copyright © 2005–2015 Association for the Advancement of Sustainability in Higher Education. AASHE reserves the right to control the reproduction and use of all material posted on this website.
-            </div>
-            <div class="link">
-              Questions? Visit our <a href="#">Help Center</a>
-            </div>
-            <div class="link">
-              <a href="#">Privacy Policy</a>
-            </div>
-          </div>
-        </div>
-      </footer>
-      {% endblock footer %}
+      {% include 'aashestrap/footer.html' %}
     </div>
   </body>
 </html>
